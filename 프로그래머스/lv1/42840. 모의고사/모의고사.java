@@ -22,6 +22,7 @@ class Solution {
                 case 7: B[i] = 5;
                     break;    
             }
+
       
             switch(i%10) {
             case 0,1: C[i] = 3;
