@@ -4,7 +4,7 @@ class Solution {
         long answer = -1;
         
         if (Math.sqrt(n) == (long)Math.sqrt(n)) {
-            return (((long)Math.sqrt(n))+1)*(((long)Math.sqrt(n))+1);
+            return (long)Math.pow(Math.sqrt(n)+1,2);
         }
         
         
