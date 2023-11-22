@@ -3,7 +3,7 @@ import java.util.*;
 class Solution {
     public int solution(int m, int n, String[] board) {
         int answer = 0;
-        int x, y;
+
         char[][] arr = new char[m][n];
 
         for (int i = 0; i < m; i++) {
@@ -17,14 +17,14 @@ class Solution {
 
             for (int k = 0; k < m - 1; k++) {
                 for (int i = 0; i < n - 1; i++) {
-                    if (arr[k][i] != '0' && arr[k][i] == arr[k][i + 1]) {
-                        if (arr[k][i] == arr[k + 1][i] && arr[k + 1][i] == arr[k + 1][i + 1]) {
+                    if (arr[k][i] != '0' && arr[k][i] == arr[k][i + 1] && arr[k][i] == arr[k + 1][i] && arr[k + 1][i] == arr[k + 1][i + 1]) 
+                         {
                             delete.add("" + k + " " + i);
                             delete.add("" + k + " " + (i + 1));
                             delete.add("" + (k + 1) + " " + i);
                             delete.add("" + (k + 1) + " " + (i + 1));
                         }
-                    }
+                    
                 }
             }
 
@@ -39,13 +39,12 @@ class Solution {
                 String str = iter.next();
                 String[] arrstr = str.split(" ");
 
-                x = Integer.parseInt(arrstr[0]);
-                y = Integer.parseInt(arrstr[1]);
+               int x = Integer.parseInt(arrstr[0]);
+               int y = Integer.parseInt(arrstr[1]);
 
                 arr[x][y] = '0';
             }
 
-            // Gravity: move blocks downward
             for (int i = m - 1; i >= 0; i--) {
                 for (int k = 0; k < n; k++) {
                     if (arr[i][k] == '0') {
