@@ -32,7 +32,7 @@ class Solution {
             answer = 1111*a;
         }
         
-        else if ( cnt == 2 && dice.length == 3 && once != -1) { // 주사위 숫자가 3개만 일치하는 경우
+        else if ( cnt == 2 && once != -1) { // 주사위 숫자가 3개만 일치하는 경우
             int p = once;
             
             
